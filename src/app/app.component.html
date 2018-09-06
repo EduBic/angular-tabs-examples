@@ -1,13 +1,44 @@
-<div style="border: 1px solid black">
+<div>
 
-  <app-tabs>
-    <app-tab [tabTitle]="'Title 1'">
-      Content tab 1
-    </app-tab>
-    <app-tab [tabTitle]="'Title 2'">
-      Content tab 2
-    </app-tab>
-  </app-tabs>
+  <div class="example"
+    style="border: 1px solid black">
+    <p>
+      Simple example taken from <a href="http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html">here</a>
+    </p>
+
+
+    <app-tabs>
+      <app-tab tabTitle="Title 1">
+        Content tab 1
+      </app-tab>
+      <app-tab tabTitle="Title 2">
+        Content tab 2
+      </app-tab>
+    </app-tabs>
+  </div>
+
+  <div class="example"
+    style="border: 1px solid black">
+    <p>
+      Alternative example taken from <a href="https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/">here</a>.
+      Basically there's no DI involves, the dependency is from parent to child, hence children know nothing about parent.
+    </p>
+
+    <app-alt-tabs>
+      <app-alt-tab tabTitle="Title 1">
+        Content tab 1
+      </app-alt-tab>
+      <app-alt-tab tabTitle="Title 2">
+        Content tab 2
+      </app-alt-tab>
+    </app-alt-tabs>
+
+  </div>
+
+  <div class="example"
+    style="border: 1px solid black">
+
+  </div>
 
 </div>
 
