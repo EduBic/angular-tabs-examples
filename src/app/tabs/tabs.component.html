@@ -1,0 +1,11 @@
+<div style="border: 1px solid black">
+  <ul>
+    <li *ngFor="let tab of tabs"
+      (click)="selectTab(tab)">
+      {{ tab.tabTitle }}
+    </li>
+  </ul>
+
+  <ng-content></ng-content>
+
+</div>
