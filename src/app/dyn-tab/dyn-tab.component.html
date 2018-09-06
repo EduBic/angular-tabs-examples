@@ -1,0 +1,11 @@
+<div [hidden]="!active"
+  style="border: 1px dotted black">
+
+  <ng-content></ng-content>
+
+  <!-- Add [ngTemplateOutletContext]="{}" to allow inject of data object -->
+  <ng-container *ngIf="templateInjected"
+    [ngTemplateOutlet]="templateInjected">
+  </ng-container>
+
+</div>

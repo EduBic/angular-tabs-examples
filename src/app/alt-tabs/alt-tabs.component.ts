@@ -29,7 +29,9 @@ export class AltTabsComponent implements OnInit, AfterContentInit {
       t.active = false;
     });
 
-    tab.active = true;
+    if (tab) {
+      tab.active = true;
+    }
   }
 
 }

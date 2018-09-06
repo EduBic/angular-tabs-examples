@@ -1,0 +1,18 @@
+<div style="border: 1px dashed black">
+  <ul>
+    <li *ngFor="let tab of dynamicTabs"
+      (click)="selectTab(tab)">
+      <a href="#">{{ tab.tabTitle }}</a>
+    </li>
+    <li>
+      <a href="#" (click)="addClicked.emit()">Add</a>
+    </li>
+  </ul>
+
+  <ng-content></ng-content>
+
+  <!-- appDynTabs => use a custom directive as anchor-->
+  <!-- #container => use a template variable as anchor -->
+  <ng-container appDynTabs #container></ng-container>
+
+</div>

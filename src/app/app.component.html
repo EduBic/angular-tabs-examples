@@ -8,10 +8,10 @@
 
 
     <app-tabs>
-      <app-tab tabTitle="Title 1">
+      <app-tab tabTitle="Tab 1">
         Content tab 1
       </app-tab>
-      <app-tab tabTitle="Title 2">
+      <app-tab tabTitle="Tab 2">
         Content tab 2
       </app-tab>
     </app-tabs>
@@ -25,10 +25,10 @@
     </p>
 
     <app-alt-tabs>
-      <app-alt-tab tabTitle="Title 1">
+      <app-alt-tab tabTitle="Alt Tab 1">
         Content tab 1
       </app-alt-tab>
-      <app-alt-tab tabTitle="Title 2">
+      <app-alt-tab tabTitle="Alt Tab 2">
         Content tab 2
       </app-alt-tab>
     </app-alt-tabs>
@@ -37,6 +37,26 @@
 
   <div class="example"
     style="border: 1px solid black">
+
+    <p>
+      Dinamically tab, example taken from <a href="https://juristr.com/blog/2017/07/ng2-dynamic-tab-component/">here</a>.
+    </p>
+
+
+
+    <app-dyn-tabs #tabsComp (addClicked)="addTab($event)">
+
+    </app-dyn-tabs>
+
+    <!-- Use let-data="data" to inject different data to new tab -->
+    <!-- Bind data into the TabComponent with *ngTemplateOutletContext="{}" -->
+    <ng-template #emptyTab>
+        <p>
+          This is a empty tab template from AppComponent pass to
+          DynTabsComponentand successively project as content of DynTabComponent
+          dynamically created.
+        </p>
+    </ng-template>
 
   </div>
 
