@@ -82,4 +82,21 @@ export class DynTabsComponent implements OnInit, AfterContentInit {
     }
   }
 
+  closeTab(tab: DynTabComponent) {
+    for (let i = 0; i < this.dynamicTabs.length; i++) {
+
+      if (this.dynamicTabs[i] === tab) {
+
+        this.dynamicTabs.splice(i, 1);          // remove from array
+        this.dynamicTabPlaceholder.remove(i);   // remove from view
+
+        if (this.dynamicTabs.length > 0) {
+          this.selectTab(this.dynamicTabs[0]);
+        }
+
+        break;
+      }
+    }
+  }
+
 }

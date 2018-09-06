@@ -3,6 +3,7 @@
     <li *ngFor="let tab of dynamicTabs"
       (click)="selectTab(tab)">
       <a href="#">{{ tab.tabTitle }}</a>
+      <span (click)="closeTab(tab)">X</span>
     </li>
     <li>
       <a href="#" (click)="addClicked.emit()">Add</a>
