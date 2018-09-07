@@ -19,10 +19,7 @@ import { DynTabsDirective } from '../dyn-tabs.directive';
   templateUrl: './dyn-tabs.component.html',
   styleUrls: ['./dyn-tabs.component.css']
 })
-export class DynTabsComponent implements OnInit, AfterContentInit {
-
-  @ContentChildren(DynTabComponent)
-  private tabs: QueryList<DynTabComponent>;
+export class DynTabsComponent implements OnInit {
 
   dynamicTabs: DynTabComponent[] = [];
 
@@ -61,15 +58,6 @@ export class DynTabsComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
-  }
-
-  ngAfterContentInit() {
-    // After projection in alt-tabs (this component)
-    const activeTabs = this.tabs.filter((tab) => tab.active);
-
-    if (activeTabs.length === 0) {
-      this.selectTab(this.tabs.first);
-    }
   }
 
   selectTab(tab: DynTabComponent) {
